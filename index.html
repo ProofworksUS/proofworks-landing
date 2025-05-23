@@ -2,56 +2,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Proofworks</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85)),
-                  url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #f2f2f2;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      letter-spacing: 1px;
-      margin: 0;
-    }
-
-    p {
-      font-size: 1.15rem;
-      max-width: 600px;
-      opacity: 0.9;
-      margin-top: 1rem;
-    }
-
-    img.logo {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      opacity: 0.6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proofworks</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="logo.png" alt="Proofworks Logo" class="logo" />
-  <h1>Proofworks</h1>
-  <p>We believe proof belongs to the people. A new standard is emerging—built on trust, not titles.</p>
-  <footer>© 2025 Proofworks. All rights reserved. proofworks.us</footer>
+    <header>
+        <h1>Proofworks</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#apply">Apply</a>
+            <a href="#stewards">Stewards</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero" style="background: url('images/pond.jpg') no-repeat center center / cover; color: white;">
+        <h2>Proof, not pedigree.</h2>
+        <p>Proofworks is a credentialing engine built for people who know their craft. No courses. No gatekeeping. Just recognition for real mastery.</p>
+        <a href="#apply" class="btn">Apply Now</a>
+    </section>
+    <section id="about">
+        <h3>What is Proofworks?</h3>
+        <p>Proofworks doesn’t teach. It recognizes. It doesn’t accredit. It proves. It doesn’t gatekeep. It opens gates.</p>
+        <p>If you're a builder, coder, chef, grower, or craftsman—we see you.</p>
+    </section>
+    <section id="apply">
+        <h3>Apply for Recognition</h3>
+        <p>This is the Alpha. Applications are reviewed manually for now. Join the beginning.</p>
+        <a href="https://forms.gle/your-google-form" target="_blank" class="btn">Start Application</a>
+    </section>
+    <section id="stewards">
+        <h3>Become a Steward</h3>
+        <p>Help validate others in your field. Join as a reviewer and guide the next wave of recognized mastery.</p>
+        <a href="https://forms.gle/your-other-google-form" target="_blank" class="btn">Join the Network</a>
+    </section>
+    <footer>
+        <p>Proofworks LLC • Havasu, AZ • Alpha Launch 2025</p>
+        <p>Follow us on TikTok and Facebook. This is the beginning.</p>
+    </footer>
 </body>
 </html>
