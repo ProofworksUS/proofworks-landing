@@ -6,6 +6,8 @@
   --border:rgba(242,244,248,.12);
   --steel:#7aa6ff;
   --ember:#ff8a4c;
+  --steel2:#b7ccff;
+  --ember2:#ffd0b5;
   --radius:18px;
   --radius-sm:14px;
   --container:1120px;
@@ -50,9 +52,43 @@ a:hover{text-decoration:underline}
 .path{min-height:180px;cursor:pointer;transition:transform .08s ease,border-color .12s ease, box-shadow .12s ease}
 .path:hover{transform:translateY(-1px);border-color:rgba(242,244,248,.22);box-shadow:0 18px 44px rgba(0,0,0,.55)}
 
-.tag{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
-.path h3{margin:6px 0 0;font-size:22px;font-weight:950}
+/* Path tiles (Trades / Oddities) */
+.path{position:relative;overflow:hidden}
+.path::before{
+  content:"";
+  position:absolute;inset:0;
+  opacity:.24;
+  background-repeat:no-repeat;
+  background-size:cover;
+  filter:contrast(1.15) saturate(1.05);
+  pointer-events:none;
+}
+.path.trades::before{background-image:url('/assets/images/path-trades.svg')}
+.path.oddities::before{background-image:url('/assets/images/path-oddities.svg')}
+.path::after{
+  content:"";
+  position:absolute;inset:0;
+  background:radial-gradient(80% 70% at 20% 10%, rgba(255,255,255,.06), rgba(0,0,0,0));
+  pointer-events:none;
+}
+.path-inner{position:relative}
+.path-kicker{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted)}
+.path-title{margin:6px 0 0;font-size:28px;font-weight:950;letter-spacing:.2px}
 .path p{margin:10px 0 0;color:var(--muted);line-height:1.55}
+
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 10px;border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+  color:var(--muted);
+  font-size:12px;
+}
+.dot{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.2)}
+.pill.steel{border-color:rgba(122,166,255,.35)}
+.pill.steel .dot{background:rgba(122,166,255,.6)}
+.pill.ember{border-color:rgba(255,138,76,.35)}
+.pill.ember .dot{background:rgba(255,138,76,.6)}
 
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .btn{
@@ -84,6 +120,10 @@ a:hover{text-decoration:underline}
 .footer a{color:var(--muted)}
 
 .notice{padding:12px 14px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.03);color:var(--muted);font-size:13px;line-height:1.55}
+
+details{border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02);padding:12px 14px}
+summary{cursor:pointer;font-weight:850}
+details > div{margin-top:10px;color:var(--muted);line-height:1.6}
 
 @media(max-width:860px){
   .grid2{grid-template-columns:1fr}
